@@ -1,1 +1,1 @@
-AI SDK Database Adapter with TypeScript
+A minimal AI SDK Database Adapter with TypeScript
