@@ -6,12 +6,6 @@ async function main() {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  const response0 = await openai.chat.completions.create({
-    model: 'gpt-4',
-    messages: [{ role: 'user', content: 'What is the capital of Germany?' }],
-  });
-  console.log(`[AI] Response: ${response0.choices[0].message.content}`);
-
   const openaiWithDb = new AIAdapter(openai, {
     store: new MemoryStore(),
     sessionId: '123e4567-e89b-12d3-a456-426614174000',
